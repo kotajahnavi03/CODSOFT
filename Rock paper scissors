@@ -1,0 +1,35 @@
+import random as r
+print("Welcome to Rock,paper,scissors game!")
+
+user_wins = 0
+computer_wins = 0
+options = ["rock","paper","scissors"]
+
+while True:
+    user_choice = input("Enter a choice(rock,paper,scissor):").lower()
+
+    computer_pick = r.choice(options)
+    print(f"\nYou chose {user_choice}, computer chose {computer_pick}.")
+
+    if (user_choice == computer_pick):
+        print(f"Both players selected {user_choice}. So,it's a tie!!")
+    elif (user_choice == "rock") and (computer_pick == "scissors"):
+        print("Rock smashes scissors. You won!")
+        user_wins+=1
+    elif (user_choice == "scissors") and (computer_pick == "paper"):
+        print("Scissor cuts paper.You won!")
+        user_wins+=1
+    elif (user_choice == "paper") and (computer_pick == "rock"):
+        print("Paper covers rock.You won!")
+        user_wins+=1
+    else:
+        print("Computer won.You lost!")
+        computer_wins+=1
+        
+    print("You have "+str(user_wins)+" wins")
+    print("The computer has "+str(computer_wins)+" wins")
+
+    play_again = input("Do you want to play again?:(yes/no)").lower()
+    if play_again != "yes":
+        print("Thanks for playing!!")
+        break
