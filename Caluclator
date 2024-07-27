@@ -1,0 +1,31 @@
+def add(val_1,val_2):
+    return val_1 + val_2
+def subtract(val_1,val_2):
+    return val_1 - val_2
+def multiply(val_1,val_2):
+    return val_1 * val_2
+def divide(val_1,val_2):
+    return val_1 / val_2
+def modulus(val_1,val_2):
+    return val_1 % val_2
+operation = input("Please select the arithmetic operation you want to perform:\n"\
+                  "1.Add\n"\
+                   "2.Subtraction\n" \
+                   "3.Multiply\n" \
+                   "4.Division\n" \
+                   "5.Modulus\n")
+val_1 = float(input("Enter value1: "))
+val_2 = float(input("Enter value2: "))
+choice = int(input("Enter 1,2,3,4 or 5: "))
+if (choice==1):
+    print(val_1, "+", val_2, "=",add(val_1,val_2))
+elif(choice==2):
+    print(val_1, "-", val_2, "=",subtract(val_1,val_2))
+elif(choice==3):
+    print(val_1, "*", val_2, "=",multiply(val_1,val_2))
+elif(choice==4):
+    print(val_1, "/", val_2, "=",divide(val_1,val_2))
+elif(choice==5):
+    print(val_1, "%", val_2, "=",modulus(val_1,val_2))
+else:
+   print("Invalid input!!")
